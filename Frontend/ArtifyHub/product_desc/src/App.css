@@ -34,3 +34,10 @@
 /* .carousel .slide img{
   width: ;
 } */
+
+.carousel .control-next.control-arrow {
+  right: 119px !important;
+}
+.carousel .control-prev.control-arrow {
+  left: 119px !important;
+}
