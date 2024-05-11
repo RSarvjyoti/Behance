@@ -20,6 +20,17 @@
     transform: rotate(360deg);
   }
 }
-.css-k008qs{
+.css-k008qs {
   align-items: center;
 }
+.css-1nj7tje {
+  display: flex;
+}
+.chakra-image {
+  justify-content: center;
+  display: flex !important;
+  width: 400px !important;
+}
+/* .carousel .slide img{
+  width: ;
+} */

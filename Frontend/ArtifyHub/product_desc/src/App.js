@@ -21,7 +21,7 @@ function App() {
       </header> */}
 
       <ChakraProvider>
-        <ProductDescriptionPage match={{ params: { id: 5 } }} />
+        <ProductDescriptionPage productId={5} />
       </ChakraProvider>
     </div>
   );
