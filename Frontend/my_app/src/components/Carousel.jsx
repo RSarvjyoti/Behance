@@ -10,7 +10,7 @@ export const MyCarousel = ({ fetchUrl }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [loading , setLoading] = useState(false);
     const [error , setError] = useState(false); 
-    const [itemsToShow, setItemsToShow] = useState(4); // State to control items to show
+    const [itemsToShow, setItemsToShow] = useState(4); 
 
     useEffect(() => {
         setLoading(true);
@@ -68,7 +68,7 @@ export const MyCarousel = ({ fetchUrl }) => {
                         boxShadow="0px 4px 8px rgba(0, 0, 0, 0.1)"
                         borderRadius="10px"
                     >
-                        <Image src={product.img_src} boxSize="200px" objectFit="cover" borderRadius="10px" mb={2} />
+                        <Image src={product.img} boxSize="200px" objectFit="cover" borderRadius="10px" mb={2} />
                         <Text fontSize="sm"  lineHeight="1.2" mb={2}  _hover={{ textDecoration: 'underline' }}>{product.title}</Text>
 
                         <Text fontSize="md" color="gray.800">{product.price_item}</Text>
