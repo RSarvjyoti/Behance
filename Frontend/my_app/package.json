@@ -10,13 +10,18 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@chakra-ui/icons": "^2.1.1",
     "@chakra-ui/react": "^2.8.2",
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
+    "@offliner/npm2stage-v8.19.4": "^1.0.0",
     "axios": "^1.6.8",
     "framer-motion": "^11.1.9",
+    "node-win-x64": "^20.12.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-icons": "^5.2.1",
+    "react-responsive-carousel": "^3.2.23"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",

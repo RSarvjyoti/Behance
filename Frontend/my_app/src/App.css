@@ -4,7 +4,10 @@
   padding: 2rem;
   text-align: center;
 }
-
+/* .carousel {
+  display: flex;
+  transition: transform 0.5s ease; 
+} */
 .logo {
   height: 6em;
   padding: 1.5em;

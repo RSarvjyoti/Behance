@@ -975,5 +975,227 @@
       "incredients": "65% Ethanol Alcohol, Aqua (Water), Aloe barbadensis Leaf Juice, Methyl Gluceth-10, Parfum (Fragrance), Acrylates/C10-30 Alkyl Acrylate Crosspolymer, Limonene, Linalool, Tromethamine, Potassium Sorbate, Sodium Benzoate.",
       "shipping_payment": "Free European delivery available for orders o$ ver 3. We accept credit card (Visa, Mastercard, Maestro, American Express), PayPal, iDEAL, Amazon Pay, Bancontact, Apple Pay & Google Pay."
     }
-  ]
+  ],
+
+  "home-1" : [
+    {
+        "img": "https://haanready.com/cdn/shop/files/sanitizer_bottle_chrysants_grey-background_bacc0b5a-893c-4609-9814-dbcee95e9c4a.jpg?v=1693478220&width=533",
+        "title": "Hand Sanitizer Healing Chrysants",
+        "product-page": "https://haanready.com/products/hand-sanitizer-healing-chrysants",
+        "price": "5,90 €",
+        "price-item": "5,90 €",
+        "price-item 3": "/"
+    },
+    {
+        "img": "https://haanready.com/cdn/shop/files/sanitizer_bottle_Verbena_grey-background_d25fbac4-e0c2-4a03-9cb3-5126a6f8f508.jpg?v=1693478013&width=533",
+        "title": "Hand Sanitizer Purifying Verbena",
+        "product-page": "https://haanready.com/products/hand-sanitizer-purifying-verbena",
+        "price-item": "5,90 €",
+        "price-item 2": "5,90 €",
+        "price-item 3": "/"
+    },
+    {
+        "img": "https://haanready.com/cdn/shop/files/sanitizer_bottle_brightrose_grey-background.jpg?v=1693478149&width=533",
+        "title": "Hand Sanitizer Bright Rose",
+        "product-page": "https://haanready.com/products/hand-sanitizer-bright-rose",
+        "price-item": "5,90 €",
+        "price-item 2": "5,90 €",
+        "price-item 3": "/"
+    },
+    {
+        "img": "https://haanready.com/cdn/shop/files/sanitizer_bottle_Margarita_grey-background.jpg?v=1693478415&width=533",
+        "title": "Hand Sanitizer Margarita Spirit",
+        "product-page": "https://haanready.com/products/hand-sanitizer-margarita-spirit",
+        "price-item": "5,90 €",
+        "price-item 2": "5,90 €",
+        "price-item 3": "/"
+    },
+    {
+        "img": "https://haanready.com/cdn/shop/files/sanitizer_bottle_Lavanda_grey-background_49f8cd18-6548-4a22-825c-81859d683bea.jpg?v=1693478355&width=533",
+        "title": "Hand Sanitizer Soothing Lavender",
+        "product-page": "https://haanready.com/products/hand-sanitizer-soothing-lavender",
+        "price-item": "5,90 €",
+        "price-item 2": "5,90 €",
+        "price-item 3": "/"
+    },
+    {
+        "img": "https://haanready.com/cdn/shop/files/sanitizer_bottle_Citrus_grey-background_c63d83e1-ae48-4c70-84a7-2b7613aa4ba0.jpg?v=1693478250&width=533",
+        "title": "Hand Sanitizer Citrus Noon",
+        "product-page": "https://haanready.com/products/hand-sanitizer-citrus-noon",
+        "price-item": "5,90 €",
+        "price-item 2": "5,90 €",
+        "price-item 3": "/"
+    },
+    {
+        "img": "https://haanready.com/cdn/shop/files/sanitizer_bottle_WoodNight_grey-background_1b30f122-5917-48fd-82e4-ca7ee61cd31d.jpg?v=1693478548&width=533",
+        "title": "Hand Sanitizer Wood Night",
+        "product-page": "https://haanready.com/products/hand-sanitizer-wood-night",
+        "price-item": "5,90 €",
+        "price-item 2": "5,90 €",
+        "price-item 3": "/"
+    },
+    {
+        "img": "https://haanready.com/cdn/shop/files/sanitizer_bottle_SunsetFleur_grey-background_2e07475b-5c6b-4189-ada0-5b81066c9085.jpg?v=1693478521&width=533",
+        "title": "Hand Sanitizer Sunset Fleur",
+        "product-page": "https://haanready.com/products/hand-sanitizer-sunset-fleur",
+        "price-item": "5,90 €",
+        "price-item 2": "5,90 €",
+        "price-item 3": "/"
+    },
+    {
+        "img": "https://haanready.com/cdn/shop/files/sanitizer_bottle_DeyOfDown_grey-background.jpg?v=1693478287&width=533",
+        "title": "Hand Sanitizer Dew of Dawn",
+        "product-page": "https://haanready.com/products/hand-sanitizer-dew-of-dawn",
+        "price-item": "5,90 €",
+        "price-item 2": "5,90 €",
+        "price-item 3": "/"
+    },
+    {
+        "img": "https://haanready.com/cdn/shop/files/sanitizer_bottle_MorningGlory_grey-background_7da13cdd-a8a8-475b-ab72-a23228c3e257.jpg?v=1693478469&width=533",
+        "title": "Hand Sanitizer Morning Glory",
+        "product-page": "https://haanready.com/products/hand-sanitizer-morning-glory",
+        "price-item": "5,90 €",
+        "price-item 2": "5,90 €",
+        "price-item 3": "/"
+    },
+    {
+        "img": "https://haanready.com/cdn/shop/products/Pocket_SA_MF_ForestGrace.jpg?v=1678356444&width=533",
+        "title": "Hand Sanitizer Forest Grace",
+        "product-page": "https://haanready.com/products/hand-sanitizer-forest-grace",
+        "price-item": "5,90 €",
+        "price-item 2": "5,90 €",
+        "price-item 3": "/"
+    },
+    {
+        "img": "https://haanready.com/cdn/shop/files/sanitizer_bottle_Camomille_grey-background_6d6bbf3a-123a-4044-b48e-9bc4374f9c6e.jpg?v=1693478183&width=533",
+        "title": "Hand Sanitizer Tranquil Camomile",
+        "product-page": "https://haanready.com/products/hand-sanitizer-tranquil-camomil",
+        "price-item": "5,90 €",
+        "price-item 2": "5,90 €",
+        "price-item 3": "/"
+    },
+    {
+        "img": "https://haanready.com/cdn/shop/products/Pocket_SA_MF_TalesLotus_1.jpg?v=1678356415&width=533",
+        "title": "Hand Sanitizer Tales of Lotus",
+        "product-page": "https://haanready.com/products/hand-sanitizer-tales-of-lotus",
+        "price-item": "5,90 €",
+        "price-item 2": "5,90 €",
+        "price-item 3": "/"
+    },
+    {
+        "img": "https://haanready.com/cdn/shop/files/sanitizer_bottle_Paloma_grey-background_78649944-190c-4c16-940a-e853a7103600.jpg?v=1693478493&width=533",
+        "title": "Hand Sanitizer Gentle Paloma",
+        "product-page": "https://haanready.com/products/hand-sanitizer-gentle-paloma",
+        "price-item": "5,90 €",
+        "price-item 2": "5,90 €",
+        "price-item 3": "/"
+    },
+    {
+        "img": "https://haanready.com/cdn/shop/products/Pocket_SA_MF_WildOrchid_5052f880-3d50-4442-82d2-e3c4eebc8159.jpg?v=1678356511&width=533",
+        "title": "Hand Sanitizer Wild Orchid",
+        "product-page": "https://haanready.com/products/hand-sanitizer-wild-orchid",
+        "price-item": "5,90 €",
+        "price-item 2": "5,90 €",
+        "price-item 3": "/"
+    },
+    {
+        "img": "https://haanready.com/cdn/shop/products/081_1.jpg?v=1651510067&width=533",
+        "title": "Hand Sanitizer - Blossom Elixir 3 Pack",
+        "product-page": "https://haanready.com/products/3-pack-mix-ro-ve-ch",
+        "price-item": "15,90 €",
+        "price-item 2": "17,70 €",
+        "price-item 3": "15,90 €",
+        "badge": "Pack Price",
+        "price-item 4": "/"
+    },
+    {
+        "img": "https://haanready.com/cdn/shop/products/16.jpg?v=1651509600&width=533",
+        "title": "Hand Sanitizer & Refill Pack - Wood Night",
+        "product-page": "https://haanready.com/products/hand-sanitizer-refill-pack-wood-night",
+        "price-item": "14,90 €",
+        "price-item 2": "15,80 €",
+        "price-item 3": "14,90 €",
+        "badge": "Pack Price",
+        "price-item 4": "/"
+    },
+    {
+        "img": "https://haanready.com/cdn/shop/products/26.jpg?v=1651510110&width=533",
+        "title": "Hand Sanitizer & Refill Pack - Bright Rose",
+        "product-page": "https://haanready.com/products/hand-sanitizer-refill-pack-bright-rose",
+        "price-item": "14,90 €",
+        "price-item 2": "15,80 €",
+        "price-item 3": "14,90 €",
+        "badge": "Pack Price",
+        "price-item 4": "/"
+    },
+    {
+        "img": "https://haanready.com/cdn/shop/products/064_f02a0b61-cc0d-4e6d-994a-9fa368f647d8.jpg?v=1651510078&width=533",
+        "title": "Hand Sanitizer - Blossom Elixir 5 Pack",
+        "product-page": "https://haanready.com/products/5-pack-mix-fragances-be",
+        "price-item": "26,90 €",
+        "price-item 2": "29,50 €",
+        "price-item 3": "26,90 €",
+        "badge": "Pack Price",
+        "price-item 4": "/"
+    },
+    {
+        "img": "https://haanready.com/cdn/shop/files/Refill_HZ_BE_BrightRose.jpg?v=1686050013&width=533",
+        "title": "Hand Sanitizer Refill Bright Rose",
+        "product-page": "https://haanready.com/products/hand-sanitizer-refill-bright-rose",
+        "price-item": "9,90 €",
+        "price-item 2": "9,90 €",
+        "price-item 3": "/"
+    },
+    {
+        "img": "https://haanready.com/cdn/shop/products/25.jpg?v=1651510085&width=533",
+        "title": "Hand Sanitizer & Refill Pack - Soothing Lavender",
+        "product-page": "https://haanready.com/products/hand-sanitizer-refill-pack-soothing-lavender",
+        "price-item": "14,90 €",
+        "price-item 2": "15,80 €",
+        "price-item 3": "14,90 €",
+        "badge": "Pack Price",
+        "price-item 4": "/"
+    },
+    {
+        "img": "https://haanready.com/cdn/shop/products/17.jpg?v=1651509584&width=533",
+        "title": "Hand Sanitizer & Refill Pack - Morning Glory",
+        "product-page": "https://haanready.com/products/hand-sanitizer-refill-pack-morning-glory",
+        "price-item": "14,90 €",
+        "price-item 2": "15,80 €",
+        "price-item 3": "14,90 €",
+        "badge": "Pack Price",
+        "price-item 4": "/"
+    },
+    {
+        "img": "https://haanready.com/cdn/shop/products/062_736773a1-2164-4170-9ef2-925154e35d00.jpg?v=1651509382&width=533",
+        "title": "Hand Sanitizer - Daily Moods 5 Pack",
+        "product-page": "https://haanready.com/products/5-pack-mix-fragances",
+        "price-item": "26,90 €",
+        "price-item 2": "29,50 €",
+        "price-item 3": "26,90 €",
+        "badge": "Pack Price",
+        "price-item 4": "/"
+    },
+    {
+        "img": "https://haanready.com/cdn/shop/products/076.jpg?v=1676293211&width=533",
+        "title": "Hand Sanitizer - Daily Moods 3 Pack",
+        "product-page": "https://haanready.com/products/3-pack-mix-cn-sf-mg",
+        "price-item": "15,90 €",
+        "price-item 2": "17,70 €",
+        "price-item 3": "15,90 €",
+        "badge": "Pack Price",
+        "price-item 4": "/"
+    },
+    {
+        "img": "https://haanready.com/cdn/shop/products/29.jpg?v=1651510101&width=533",
+        "title": "Hand Sanitizer & Refill Pack - Healing Chrysants",
+        "product-page": "https://haanready.com/products/hand-sanitizer-refill-pack-healing-chrysants",
+        "price-item": "14,90 €",
+        "price-item 2": "15,80 €",
+        "price-item 3": "14,90 €",
+        "badge": "Pack Price",
+        "price-item 4": "/"
+    }
+]
+
 }
