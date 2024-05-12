@@ -21,6 +21,7 @@ import {
   ChevronDownIcon,
   ChevronRightIcon,
 } from "@chakra-ui/icons";
+import logo from '../Images/logoApp.png'
 
 //navbar
 export const Navbar = () => {
@@ -61,8 +62,7 @@ export const Navbar = () => {
             fontFamily={"heading"}
             color={useColorModeValue("gray.800", "white")}
           >
-            {/* <Image src="../image/Haan_logo.png" alt="Logo" /> */}
-            Logo
+           <Image src={logo} />
           </Text>
 
           <Flex display={{ base: "none", md: "flex" }} ml={10}>
