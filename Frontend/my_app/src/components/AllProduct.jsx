@@ -10,7 +10,7 @@ import SearchBar from './SearchBar';
 const ITEMS_PER_PAGE = 20;
 
 const AllProduct = () => {
-    
+
     const [myData, setData] = useState([]);
     const [error, setError] = useState("");
     const [isHovered, setIsHovered] = useState(false);
@@ -41,6 +41,8 @@ const AllProduct = () => {
     }
 
     return (
+
+
         <Container maxW="container.xl" centerContent>
             <Flex direction='row' justifyContent='space-between' p={2} w='100%' alignItems="center" flexWrap="wrap">
                 <Button colorScheme='black' variant='outline' mb={{ base: 2, md: 0 }}>
@@ -62,14 +64,16 @@ const AllProduct = () => {
 
                             return (
                                 <GridItem key={id} w='100%' h='auto'>
-                                    <Card maxW='sm'>
+                                    <Card maxW='300px' h='450px' style={flex}>
                                         <CardBody>
                                             <LinkBox onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
                                                 <Box>
-                                                    <Image
-                                                        src={isHovered ? img_src_2 : img_src}
-                                                        alt={title}
-                                                    />
+                                                    <Box w='200px' h='200px' style={{ overflow: 'hidden' }}>
+                                                        <Image
+                                                            src={isHovered ? img_src_2 : img_src}
+                                                            alt={title}
+                                                        />
+                                                    </Box>
                                                     <Stack mt='6' spacing='3'>
                                                         <Text text-aling style={flex}>
                                                             <LinkOverlay href='#'> {title} </LinkOverlay>
@@ -81,7 +85,7 @@ const AllProduct = () => {
                                                 </Box>
                                             </LinkBox>
                                         </CardBody>
-                                        <CardFooter style={flex}>
+                                        <CardFooter style={{...flex}} >
                                             <Button borderRadius='50px' border={'1px'} bg='none' >
                                                 Add to cart
                                             </Button>
