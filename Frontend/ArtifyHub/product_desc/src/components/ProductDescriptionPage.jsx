@@ -8,18 +8,14 @@ import {
   Button,
   VStack,
   Spinner,
-  // ChakraProvider,
   Center,
   Accordion,
-  AccordionItem,
-  AccordionButton,
-  AccordionIcon,
-  AccordionPanel,
 } from "@chakra-ui/react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import axios from "axios";
-
+import AccordianItems from "./AccordianItems";
+import "../css files/ProductDP.css";
 const ProductDescriptionPage = ({ productId }) => {
   const [product, setProduct] = React.useState(null);
   const [loading, setLoading] = React.useState(true);
@@ -58,7 +54,18 @@ const ProductDescriptionPage = ({ productId }) => {
   }
 
   const productImages = [product.img_src, product.img_src_2]; // Assuming img_src_2 exists
-
+  const accTitle = [ 
+    "How to Refill",
+    "How to use",
+    "Ingredients",
+    "Shipping & Payment",
+  ];
+  const sectData = [
+    product.refill,
+    product.usage,
+    product.incredients,
+    product.shipping_payment,
+  ];
   return (
     <>
       <Box
@@ -86,9 +93,9 @@ const ProductDescriptionPage = ({ productId }) => {
           </Carousel>
         </Box>
 
-        <Box style={{ flex: 1 }} ml={"100px"}>
+        <Box style={{ flex: 1 }} ml={"150px"}>
           <Flex>
-            <VStack align="start" spacing={14}>
+            <VStack align="start" spacing={4}>
               <Heading as="h1" fontSize="xl">
                 {product.title}
               </Heading>
@@ -118,51 +125,26 @@ const ProductDescriptionPage = ({ productId }) => {
               </Box>
             </VStack>
           </Flex>
+          <Box>
+            <Accordion defaultIndex={[0]} allowMultiple>
+              {accTitle.map((title, index) => {
+                return (
+                  <AccordianItems
+                    titleOfSection={title}
+                    description={sectData[index]}
+                    ind ={index}
+                  />
+                );
+              })}
+            </Accordion>
+          </Box>
         </Box>
-        {/* <Box>
+      </Box>
+      {/* <Box>
           <Flex justify="center" mb={4}>
             <Image src={product.img_src_2} alt={product.name} />
           </Flex>
         </Box> */}
-        
-      </Box>
-      <Box style={{ flex: 1 }}>
-        <Accordion defaultIndex={[0]} allowMultiple>
-          <AccordionItem>
-            <h2>
-              <AccordionButton>
-                <Box as="span" flex="1" textAlign="left">
-                  Section 1 title
-                </Box>
-                <AccordionIcon />
-              </AccordionButton>
-            </h2>
-            <AccordionPanel pb={4}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
-            </AccordionPanel>
-          </AccordionItem>
-
-          <AccordionItem>
-            <h2>
-              <AccordionButton>
-                <Box as="span" flex="1" textAlign="left">
-                  Section 2 title
-                </Box>
-                <AccordionIcon />
-              </AccordionButton>
-            </h2>
-            <AccordionPanel pb={4}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
-            </AccordionPanel>
-          </AccordionItem>
-        </Accordion>
-      </Box>
     </>
   );
 };
