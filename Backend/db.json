@@ -1109,60 +1109,12 @@
         "price-item 4": "/"
     },
     {
-        "img": "https://haanready.com/cdn/shop/products/16.jpg?v=1651509600&width=533",
-        "title": "Hand Sanitizer & Refill Pack - Wood Night",
-        "product-page": "https://haanready.com/products/hand-sanitizer-refill-pack-wood-night",
-        "price-item": "14,90 €",
-        "price-item 2": "15,80 €",
-        "price-item 3": "14,90 €",
-        "badge": "Pack Price",
-        "price-item 4": "/"
-    },
-    {
-        "img": "https://haanready.com/cdn/shop/products/26.jpg?v=1651510110&width=533",
-        "title": "Hand Sanitizer & Refill Pack - Bright Rose",
-        "product-page": "https://haanready.com/products/hand-sanitizer-refill-pack-bright-rose",
-        "price-item": "14,90 €",
-        "price-item 2": "15,80 €",
-        "price-item 3": "14,90 €",
-        "badge": "Pack Price",
-        "price-item 4": "/"
-    },
-    {
         "img": "https://haanready.com/cdn/shop/products/064_f02a0b61-cc0d-4e6d-994a-9fa368f647d8.jpg?v=1651510078&width=533",
         "title": "Hand Sanitizer - Blossom Elixir 5 Pack",
         "product-page": "https://haanready.com/products/5-pack-mix-fragances-be",
         "price-item": "26,90 €",
         "price-item 2": "29,50 €",
         "price-item 3": "26,90 €",
-        "badge": "Pack Price",
-        "price-item 4": "/"
-    },
-    {
-        "img": "https://haanready.com/cdn/shop/files/Refill_HZ_BE_BrightRose.jpg?v=1686050013&width=533",
-        "title": "Hand Sanitizer Refill Bright Rose",
-        "product-page": "https://haanready.com/products/hand-sanitizer-refill-bright-rose",
-        "price-item": "9,90 €",
-        "price-item 2": "9,90 €",
-        "price-item 3": "/"
-    },
-    {
-        "img": "https://haanready.com/cdn/shop/products/25.jpg?v=1651510085&width=533",
-        "title": "Hand Sanitizer & Refill Pack - Soothing Lavender",
-        "product-page": "https://haanready.com/products/hand-sanitizer-refill-pack-soothing-lavender",
-        "price-item": "14,90 €",
-        "price-item 2": "15,80 €",
-        "price-item 3": "14,90 €",
-        "badge": "Pack Price",
-        "price-item 4": "/"
-    },
-    {
-        "img": "https://haanready.com/cdn/shop/products/17.jpg?v=1651509584&width=533",
-        "title": "Hand Sanitizer & Refill Pack - Morning Glory",
-        "product-page": "https://haanready.com/products/hand-sanitizer-refill-pack-morning-glory",
-        "price-item": "14,90 €",
-        "price-item 2": "15,80 €",
-        "price-item 3": "14,90 €",
         "badge": "Pack Price",
         "price-item 4": "/"
     },
@@ -1196,6 +1148,173 @@
         "badge": "Pack Price",
         "price-item 4": "/"
     }
+],
+
+"home-2" : [
+  {
+      "img": "https://haanready.com/cdn/shop/files/SPF30_bottle_FaceCream_grey.jpg?v=1693476294&width=823",
+      "title": "Face Cream SPF 30",
+      "product-page": "https://haanready.com/products/face-cream-spf",
+      "price": "19,90 €",
+      "price-item": "19,90 €",
+      "price-item 3": "/"
+  },
+  {
+    "img": "https://haanready.com/cdn/shop/products/01_8.png?v=1675872879&width=823",
+    "title": "Full Skin Care Routine - for Normal to Combination Skin",
+    "product-page": "https://haanready.com/products/hyaluronic-face-cleanser-face-cream-face-serum",
+    "price": "49,90 €",
+    "price-item": "49,90 €",
+    "price-item 3": "/"
+},
+{
+  "img": "https://haanready.com/cdn/shop/products/01_1_9865fd8c-29ab-429e-a853-84d38d41e4db.jpg?v=1675871481&width=823",
+  "title": "Hyaluronic Face Cleanser - for Normal to Combination Skin",
+  "product-page": "https://haanready.com/products/face-cleanser-morning-glory-normal",
+  "price": "12,90 €",
+  "price-item": "12,90 €",
+  "price-item 3": "/"
+},
+{
+  "img": "https://haanready.com/cdn/shop/products/WEB_FACECLEANSER_REFILL_HYALURONIC_1copia.jpg?v=1664957759&width=823",
+  "title": "Hyaluronic Face Cleanser Refill",
+  "product-page": "",
+  "price": "9,90 €",
+  "price-item": "9,90 €",
+  "price-item 3": "/"
+},
+{
+  "img": "https://haanready.com/cdn/shop/products/Normalrefill.jpg?v=1664960629&width=823",
+  "title": "Hyaluronic Face Cleanser + Refill",
+  "product-page": "https://haanready.com/products/face-cleanser-refill-morning-glory",
+  "price": "17,90 €",
+  "price-item": "17,90 €",
+  "price-item 3": "/"
+},
+{
+  "img": "https://haanready.com/cdn/shop/products/01_4.png?v=1675870947&width=823",
+  "title": "Hyaluronic Face Serum - for Normal to Combination Skin",
+  "product-page": "https://haanready.com/products/hyaluronic-face-serum-for-normal-to-combination-skin",
+  "price": "24,90 €",
+  "price-item": "24,90 €",
+  "price-item 3": "/"
+}
+],
+
+"home-3" : [
+  {
+      "id":"1",
+      "img": "https://haanready.com/cdn/shop/files/sanitizer_bottle_WoodNight_grey-background_1b30f122-5917-48fd-82e4-ca7ee61cd31d.jpg?v=1693478548&width=823",
+      "title": "Hand Sanitizer Wood Night",
+      "product-page": "https://haanready.com/products/hand-sanitizer-wood-night",
+      "price": "5,90 €",
+      "price-item": "5,90 €",
+      "price-item 3": "/"
+  },
+  {
+    "id":"2",
+    "img": "https://haanready.com/cdn/shop/files/sanitizer_bottle_brightrose_grey-background.jpg?v=1693478149&width=823",
+    "title": "Hand Sanitizer Bright Rose",
+    "product-page": "https://haanready.com/products/hand-sanitizer-bright-rose",
+    "price": "5,90 €",
+    "price-item": "5,90 €",
+    "price-item 3": "/"
+},
+{
+  "id":"3",
+  "img": "https://haanready.com/cdn/shop/files/Mouth_Spray_Familia_grey_1.jpg?v=1708096699&width=823",
+  "title": "Mouth Spray Pack",
+  "product-page": "https://haanready.com/products/mouth-spray-pack",
+  "price": "12,90 €",
+  "price-item": "12,90 €",
+  "price-item 3": "/"
+},
+{
+  "id":"4",
+  "img": "https://haanready.com/cdn/shop/products/01_10.jpg?v=1675941436&width=823",
+  "title": "Hand Cream Coco Cooler",
+  "product-page": "https://haanready.com/products/hand-cream-coco-cooler",
+  "price": "13,90 €",
+  "price-item": "13,90 €",
+  "price-item 3": "/"
+},
+{
+  "id":"5",
+  "img": "https://haanready.com/cdn/shop/files/sanitizer_bottle_WoodNight_grey-background_1b30f122-5917-48fd-82e4-ca7ee61cd31d.jpg?v=1693478548&width=823",
+  "title": "Hand Sanitizer Wood Night",
+  "product-page": "https://haanready.com/products/hand-sanitizer-wood-night",
+  "price": "5,90 €",
+  "price-item": "5,90 €",
+  "price-item 3": "/"
+},
+  {
+    "id":"6",
+    "img": "https://haanready.com/cdn/shop/files/Travel_bottle_SPF30_grey.jpg?v=1693476693&width=823",
+    "title": "Sunscreen SPF 35",
+    "product-page": "https://haanready.com/products/sunscreen-spf35",
+    "price": "19,90 €",
+    "price-item": "19,90 €",
+    "price-item 3": "/"
+}
+],
+
+"home-4":[
+  {
+    "id":"1",
+    "img": "https://haanready.com/cdn/shop/products/26.jpg?v=1651510110&width=533",
+    "title": "Hand Sanitizer & Refill Pack - Bright Rose",
+    "product-page": "https://haanready.com/products/hand-sanitizer-refill-pack-bright-rose",
+    "price-item": "14,90 €",
+    "price-item 2": "15,80 €",
+    "price-item 3": "14,90 €",
+    "badge": "Pack Price",
+    "price-item 4": "/"
+},
+  {
+    "id":"2",
+      "img": "https://haanready.com/cdn/shop/files/Refill_HZ_BE_BrightRose.jpg?v=1686050013&width=533",
+      "title": "Hand Sanitizer Refill Bright Rose",
+      "product-page": "https://haanready.com/products/hand-sanitizer-refill-bright-rose",
+      "price-item": "9,90 €",
+      "price-item 2": "9,90 €",
+      "price-item 3": "/"
+  },
+  {
+    "id":"3",
+      "img": "https://haanready.com/cdn/shop/products/25.jpg?v=1651510085&width=533",
+      "title": "Hand Sanitizer & Refill Pack - Soothing Lavender",
+      "product-page": "https://haanready.com/products/hand-sanitizer-refill-pack-soothing-lavender",
+      "price-item": "14,90 €",
+      "price-item 2": "15,80 €",
+      "price-item 3": "14,90 €",
+      "badge": "Pack Price",
+      "price-item 4": "/"
+  },
+  {
+    "id":"4",
+      "img": "https://haanready.com/cdn/shop/products/17.jpg?v=1651509584&width=533",
+      "title": "Hand Sanitizer & Refill Pack - Morning Glory",
+      "product-page": "https://haanready.com/products/hand-sanitizer-refill-pack-morning-glory",
+      "price-item": "14,90 €",
+      "price-item 2": "15,80 €",
+      "price-item 3": "14,90 €",
+      "badge": "Pack Price",
+      "price-item 4": "/"
+  },
+  {
+    "id":"5",
+    "img": "https://haanready.com/cdn/shop/products/16.jpg?v=1651509600&width=533",
+    "title": "Hand Sanitizer & Refill Pack - Wood Night",
+    "product-page": "https://haanready.com/products/hand-sanitizer-refill-pack-wood-night",
+    "price-item": "14,90 €",
+    "price-item 2": "15,80 €",
+    "price-item 3": "14,90 €",
+    "badge": "Pack Price",
+    "price-item 4": "/"
+},
 ]
+
+
+
 
 }

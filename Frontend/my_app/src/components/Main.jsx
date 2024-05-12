@@ -11,13 +11,25 @@ export const MainContent=()=>{
       
         <div>
            <h1>Image 1</h1>
-          <MyCarousel fetchUrl={'https://behance-z9se.onrender.com/data'} />
+           <br />
+           <h1 >Shop our Hydrating Hand Sanitizers</h1>
+          <MyCarousel fetchUrl={'https://behance-z9se.onrender.com/home-1'} />
+
           <h1>Image 2</h1>
-          <MyCarousel fetchUrl={'https://behance-z9se.onrender.com/data'} />
+          <br />
+          <h1>Keep Your Skin Healthy On The Move!</h1>
+          <MyCarousel fetchUrl={'https://behance-z9se.onrender.com/home-1'} />
+
+          <br />
+          <h1>Shop Our Best Sellers</h1>
+          <MyCarousel fetchUrl={'https://behance-z9se.onrender.com/home-1'} />
+
           <h1>Image 3</h1>
-          <MyCarousel fetchUrl={'https://behance-z9se.onrender.com/data'} />
+          <br />
+          <h1>Our Refills</h1>
+          <MyCarousel fetchUrl={'https://behance-z9se.onrender.com/home-1'} />
+
           <h1>Image 4</h1>
-          <MyCarousel fetchUrl={'https://behance-z9se.onrender.com/data'} />
         </div>
         </>
       );
