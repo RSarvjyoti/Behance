@@ -40,4 +40,10 @@
 }
 .carousel .control-prev.control-arrow {
   left: 119px !important;
+  color: #fafafa;
+}
+.chakra-accordion {
+  width: 400px !important;
+  right: 310px !important;
+  position: absolute !important;
 }
