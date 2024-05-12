@@ -1,0 +1,20 @@
+@import url("https://fonts.cdnfonts.com/css/apercu-pro");
+
+* {
+  font-family: "Apercu Pro", sans-serif !important;
+}
+
+.carousel.carousel-slider .control-arrow {
+  top: 200px !important;
+  color: #ffffff;
+  font-size: 26px;
+  bottom: 194px !;
+  margin-top: 0;
+  padding: 5px;
+}
+.chakra-accordion{
+  margin-top: 20px !important;
+}
+.css-1eziwv{
+  font-weight: 600;
+}
