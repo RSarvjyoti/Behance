@@ -1,8 +1,7 @@
-import { ChakraProvider } from "@chakra-ui/react";
+import { ChakraProvider, useSafeLayoutEffect } from "@chakra-ui/react";
 import AllProduct from "./components/AllProduct";
 
 function App() {
-
   return (
     <>
       <ChakraProvider>

@@ -2,7 +2,15 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import {
     Container, Grid, GridItem, Box, Flex, Button, Card, CardBody, CardFooter,
-    Image, Stack, Text, LinkBox, LinkOverlay, Input
+    Image, Stack, Text, LinkBox, LinkOverlay, Input,
+    Modal,
+    ModalOverlay,
+    ModalContent,
+    ModalHeader,
+    ModalCloseButton,
+    ModalBody,
+    ModalFooter,
+    Link,
 } from '@chakra-ui/react';
 import { Pagination } from './Pagination';
 import SearchBar from './SearchBar';
@@ -16,6 +24,16 @@ const AllProduct = () => {
     const [isHovered, setIsHovered] = useState(false);
     const [currentPage, setCurrentPage] = useState(1);
     const [searchQuery, setSearchQuery] = useState("");
+
+    const [isOpen, setIsOpen] = useState(false);
+
+    const openPopup = () => {
+        setIsOpen(true);
+    };
+
+    const closePopup = () => {
+        setIsOpen(false);
+    };
 
     useEffect(() => {
         axios.get('https://behance-z9se.onrender.com/data')
@@ -41,8 +59,6 @@ const AllProduct = () => {
     }
 
     return (
-
-
         <Container maxW="container.xl" centerContent>
             <Flex direction='row' justifyContent='space-between' p={2} w='100%' alignItems="center" flexWrap="wrap">
                 <Button colorScheme='black' variant='outline' mb={{ base: 2, md: 0 }}>
@@ -66,9 +82,9 @@ const AllProduct = () => {
                                 <GridItem key={id} w='100%' h='auto'>
                                     <Card maxW='300px' h='450px' style={flex}>
                                         <CardBody>
-                                            <LinkBox onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
-                                                <Box>
-                                                    <Box w='200px' h='200px' style={{ overflow: 'hidden' }}>
+                                            <LinkBox >
+                                                <Box onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
+                                                    <Box w='200px' h='200px' style={{ overflow: 'hidden' }} >
                                                         <Image
                                                             src={isHovered ? img_src_2 : img_src}
                                                             alt={title}
@@ -85,10 +101,36 @@ const AllProduct = () => {
                                                 </Box>
                                             </LinkBox>
                                         </CardBody>
-                                        <CardFooter style={{...flex}} >
-                                            <Button borderRadius='50px' border={'1px'} bg='none' >
+                                        <CardFooter style={{ ...flex }} >
+
+
+                                            {/* <Button borderRadius='50px' border={'1px'} bg='none'>
                                                 Add to cart
-                                            </Button>
+                                            </Button> */}
+
+                                            <Button onClick={openPopup}>Add To Cart</Button>
+                                            <Modal isOpen={isOpen} onClose={closePopup} size="md">
+                                                <ModalOverlay />
+                                                <ModalContent>
+                                                    <ModalHeader>Email</ModalHeader>
+                                                    <ModalCloseButton />
+                                                    <ModalBody>
+                                                        <Box>
+                                                            <h1>Good afternoon.</h1>
+                                                            <Button colorScheme="blue">Subscribe for more access</Button>
+                                                            <Link color="black" textDecoration="underline" href="#">
+                                                                Log out
+                                                            </Link>
+                                                        </Box>
+                                                    </ModalBody>
+                                                    <ModalFooter>
+                                                        {/* Any additional footer content can be added here */}
+                                                    </ModalFooter>
+                                                </ModalContent>
+                                            </Modal>
+
+
+
                                         </CardFooter>
                                     </Card>
                                 </GridItem>
