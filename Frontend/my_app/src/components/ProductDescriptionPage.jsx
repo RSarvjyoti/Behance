@@ -16,7 +16,13 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import axios from "axios";
 import AccordianItems from "./AccordianItems";
 import "../css files/ProductDP.css";
-const ProductDescriptionPage = ({ productId }) => {
+
+
+
+const ProductDescriptionPage = ({productId}) => {
+ console.log("pdp" ,productId);
+ let proId = parseInt(productId);
+ console.log(typeof(proId));
   const [product, setProduct] = React.useState(null);
   const [loading, setLoading] = React.useState(true);
 
@@ -24,7 +30,7 @@ const ProductDescriptionPage = ({ productId }) => {
     const fetchProduct = async () => {
       try {
         const response = await axios.get(
-          `https://behance-z9se.onrender.com/data/${productId}`
+          `https://behance-z9se.onrender.com/data/${proId}`
         );
         const data = response.data;
         setProduct(data);
@@ -35,7 +41,7 @@ const ProductDescriptionPage = ({ productId }) => {
       }
     };
     fetchProduct();
-  }, [productId]);
+  }, [proId]);
 
   if (loading) {
     return (

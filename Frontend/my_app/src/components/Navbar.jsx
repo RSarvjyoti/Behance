@@ -81,24 +81,24 @@ export const Navbar = () => {
             fontSize={"sm"}
             fontWeight={400}
             variant={"link"}
-            href={"#"}
-          >
+            href="/login" to="/login" >
             Sign In
           </Button>
-          <Button
+          <Button 
             as={"a"}
             display={{ base: "none", md: "inline-flex" }}
             fontSize={"sm"}
             fontWeight={600}
             color={"white"}
             bg={"pink.400"}
-            href={"#"}
+            href="/register" to="/register"
             _hover={{
               bg: "pink.300",
             }}
           >
             Sign Up
           </Button>
+          {/* <Link style={{marginLeft:"10px", marginRight:'10px' , textDecoration:'none'}} href="/" to="/">Home</Link> */}
         </Stack>
       </Flex>
 
@@ -116,6 +116,15 @@ const DesktopNav = () => {
   const popoverContentBgColor = useColorModeValue("white", "gray.800");
 
   return (
+
+    <>
+<Box >
+  <Link style={{marginLeft:"10px", marginRight:'10px' , textDecoration:'none'}} href="/" to="/">Home</Link>
+  <Link style={{marginLeft:"10px", marginRight:'10px', textDecoration:'none'}} href="/allproducts" to="/allproducts">All Products</Link>
+</Box>
+         
+         {/* <Link to="/users" >Users</Link>
+         <Link to="/about" >About</Link> */}
     <Stack direction={"row"} spacing={4}>
       {NAV_ITEMS.map((navItem) => (
         <Box key={navItem.label}>
@@ -156,6 +165,7 @@ const DesktopNav = () => {
         </Box>
       ))}
     </Stack>
+    </>
   );
 };
 
@@ -269,67 +279,34 @@ const MobileNavItem = ({ label, children, href }) => {
 };
 
 const NAV_ITEMS = [
-  // nav link 1
-  {
-    label: "All Products",
-    children: [
-      // child 1
-      {
-        label: "All Products Page Should Show",
-        subLabel: "Hand Sanitizers",
-        href: "#",
-      },
-      // child 2
-      {
-        label: "on click of action should be added here",
-        href: "#",
-      },
-    ],
-  },
-  // nav link 2
-  {
-    label: "Mothers Day",
-    children: [
-      {
-        label: "Special Offers",
-        href: "#",
-      },
-      {
-        label: "Buy1 Get 1Free",
-        href: "#",
-      },
-    ],
-  },
-  // nav link 3
-  // add as many as i want
-  {
-    label: "Best Seller",
-    children: [
-      {
-        label: "Special Offers",
-        href: "#",
-      },
-      {
-        label: "Buy1 Get 1Free",
-        href: "#",
-      },
-    ],
-  },
+  // {
+  //   label: "Best Seller",
+  //   children: [
+  //     {
+  //       label: "Special Offers",
+  //       href: "#",
+  //     },
+  //     {
+  //       label: "Buy1 Get 1Free",
+  //       href: "#",
+  //     },
+  //   ],
+  // },
 
   //Shop set refill about
-  {
-    label: "Shop",
-    children: [
-      {
-        label: "Special Offers",
-        href: "#",
-      },
-      {
-        label: "Buy1 Get 1Free",
-        href: "#",
-      },
-    ],
-  },
+  // {
+  //   label: "Shop",
+  //   children: [
+  //     {
+  //       label: "Special Offers",
+  //       href: "#",
+  //     },
+  //     {
+  //       label: "Buy1 Get 1Free",
+  //       href: "#",
+  //     },
+  //   ],
+  // },
   //
   {
     label: "Set",
