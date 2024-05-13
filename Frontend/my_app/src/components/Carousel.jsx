@@ -1,11 +1,25 @@
 import { useState, useEffect } from "react";
-import { Box, Button, Flex, Image, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Flex,
+  Image,
+  Link,
+  Modal,
+  ModalBody,
+  ModalCloseButton,
+  ModalContent,
+  ModalFooter,
+  ModalHeader,
+  ModalOverlay,
+  Text,
+} from "@chakra-ui/react";
 import { ChevronLeftIcon, ChevronRightIcon } from "@chakra-ui/icons";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import axios from "axios";
 
-export const MyCarousel = ({ fetchUrl, onCardClick }) => {
+export const MyCarousel = ({ fetchUrl }) => {
   const [products, setProducts] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [loading, setLoading] = useState(false);
@@ -51,11 +65,9 @@ export const MyCarousel = ({ fetchUrl, onCardClick }) => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const handleCardClick = (productId) => {
-    if (typeof onCardClick === "function") {
-      onCardClick(productId); // Navigate to ProductDescriptionPage with the product ID
-    }
-  };
+  const handleAddToCart =()=>{
+      console.log("Add To Cart Listnening!!");
+  }
 
   return (
     <>
@@ -64,72 +76,75 @@ export const MyCarousel = ({ fetchUrl, onCardClick }) => {
         {error && <h3>error...</h3>}
 
         <Flex direction="row" alignItems="center" justifyContent="center">
-          <Button
-            onClick={handlePrev}
-            disabled={currentIndex === 0}
-            mt={4}
-            leftIcon={<ChevronLeftIcon />}
-          ></Button>
-          <Carousel
-            showStatus={false}
-            showIndicators={false}
-            showThumbs={false}
+  <Button
+    onClick={handlePrev}
+    disabled={currentIndex === 0}
+    mt={4}
+    leftIcon={<ChevronLeftIcon />}
+  ></Button>
+  <Carousel
+    showStatus={false}
+    showIndicators={false}
+    showThumbs={false}
+  >
+    <Flex className="carousel">
+      {products
+        .slice(currentIndex, currentIndex + itemsToShow)
+        .map((product) => (
+          <Box
+            key={product.id}
+            className="carousel-item"
+            textAlign="center"
+            p={4}
+            _hover={{ bg: "blue.100" }}
+            boxShadow="0px 4px 8px rgba(0, 0, 0, 0.1)"
+            borderRadius="10px"
+            width={`calc(100% / ${itemsToShow})`} 
           >
-            <Flex className="carousel">
-              {products
-                .slice(currentIndex, currentIndex + itemsToShow)
-                .map((product) => (
-                  <Box
-                    key={product.id}
-                    className="carousel-item"
-                    textAlign="center"
-                    p={4}
-                    _hover={{ bg: "blue.100", cursor: "pointer" }} // Add cursor pointer for hover effect
-                    onClick={() => handleCardClick(product.id)} // Call handleCardClick when the card is clicked
-                    boxShadow="0px 4px 8px rgba(0, 0, 0, 0.1)"
-                    borderRadius="10px"
-                  >
-                    <Image
-                      src={product.img}
-                      boxSize="200px"
-                      objectFit="cover"
-                      borderRadius="10px"
-                      mb={2}
-                    />
-                    <Text
-                      fontSize="sm"
-                      lineHeight="1.2"
-                      mb={2}
-                      _hover={{ textDecoration: "underline" }}
-                    >
-                      {product.title}
-                    </Text>
+            <Image
+              src={product.img}
+            //   boxSize="200px"
+              objectFit="cover"
+              borderRadius="10px"
+              mb={2}
+            />
+            <Text
+              fontSize="sm"
+              lineHeight="1.2"
+              mb={2}
+              _hover={{ textDecoration: "underline" }}
+            >
+              {product.title}
+            </Text>
 
-                    <Text fontSize="md" color="gray.800">
-                      {product.price_item}
-                    </Text>
-                    <Button
-                      mt={2}
-                      fontSize="sm"
-                      bg="white"
-                      color="black"
-                      border="1px solid"
-                      borderRadius="10px"
-                      _hover={{ bg: "black", color: "white" }}
-                    >
-                      Add to Cart
-                    </Button>
-                  </Box>
-                ))}
-            </Flex>
-          </Carousel>
-          <Button
-            onClick={handleNext}
-            disabled={currentIndex >= products.length - itemsToShow}
-            mt={2}
-            rightIcon={<ChevronRightIcon />}
-          ></Button>
-        </Flex>
+            <Text fontSize="md" color="gray.800">
+              {product.price_item}
+            </Text>
+            <Button
+              onClick={handleAddToCart}
+              mt={2}
+              fontSize="sm"
+              bg="white"
+              color="black"
+              border="1px solid"
+              borderRadius="10px"
+              _hover={{ bg: "black", color: "white" }}
+            >
+              Add to Cart
+            </Button>
+          </Box>
+        ))}
+    </Flex>
+  </Carousel>
+  {/* <PopupExample /> */}
+  <Button
+    onClick={handleNext}
+    disabled={currentIndex >= products.length - itemsToShow}
+    mt={2}
+    rightIcon={<ChevronRightIcon />}
+  ></Button>
+</Flex>
+
       </div>
     </>
   );

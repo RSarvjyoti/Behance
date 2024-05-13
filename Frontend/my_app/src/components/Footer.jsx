@@ -10,16 +10,18 @@ import {
     Input,
     IconButton,
     useColorModeValue,
+    Image,
   } from '@chakra-ui/react';
   import { FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
   import { BiMailSend } from 'react-icons/bi';
+  import logo from '../Images/logoApp.png'
   
   const Logo = (props) => {
     return (
       <svg
         height={32}
         viewBox="0 0 120 28"
-        xmlns="https://drive.google.com/file/d/1JPVZOBGRV0nT1pM2cR6uRoI6urzxq5J7/view?usp=sharing"
+        xmlns={logo}
         {...props}>
         {/* Your SVG path here */}
       </svg>
@@ -72,11 +74,10 @@ import {
             spacing={8}>
             <Stack spacing={6}>
               <Box>
-                <Logo color={useColorModeValue('gray.700', 'white')} />
+                {/* <Logo color={useColorModeValue('gray.700', 'white')} />
+                 */}
+                 <Image src={logo} />
               </Box>
-              <Text fontSize={'sm'}>
-                © 2022 Chakra Templates. All rights reserved
-              </Text>
               <Stack direction={'row'} spacing={6}>
                 <SocialButton label={'Twitter'} href={'#'}>
                   <FaTwitter />
