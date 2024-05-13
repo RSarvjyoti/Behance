@@ -1,14 +1,12 @@
-
-
-
-
+ 
 import React, { useState, useEffect } from 'react';
 import { BsFillArchiveFill, BsFillGrid3X3GapFill, BsPeopleFill, BsFillBellFill } from 'react-icons/bs';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, LineChart, Line } from 'recharts';
  import CrudComponent from './Crud';
+ import "./Dashboard.css"
  
  
-function Home() {
+function Dashboard() {
     const data = [
         {
           name: 'Page A',
@@ -66,7 +64,7 @@ function Home() {
         try {
             const [productsResponse, usersResponse] = await Promise.all([
                 fetch('https://behance-z9se.onrender.com/data'),
-                fetch('http://localhost:8080/users')
+                fetch('https://behance-z9se.onrender.com/users')
             ]);
             
             const [productsData, usersData] = await Promise.all([
@@ -175,5 +173,5 @@ function Home() {
     );
 }
 
-export default Home;
+export default Dashboard;
 
