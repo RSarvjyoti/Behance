@@ -4,17 +4,23 @@ import home2 from "../Images/home-2.webp";
 import home3 from "../Images/home-3.webp";
 import home4 from "../Images/home-4.webp";
 import { Box, Image, Text } from "@chakra-ui/react";
-
-export const MainContent = ({handleCardClick}) => {
-
+import { useNavigate } from "react-router-dom";
+export const MainContent = () => {
   // const handleCardClick=()=>{
   //   console.log();
   // }
+  const navigate = useNavigate();
+  const handleCardClick = (id) => {
+    localStorage.setItem("productId", id);
+    navigate("/prodesc");
+  };
+
   return (
     <>
       <div>
         {/* <Image src={home1} /> */}
-        <Box style={{ marginTop:"10px", marginBottom: "20px" }}
+        <Box
+          style={{ marginTop: "10px", marginBottom: "20px" }}
           bgImage={`url(${home1})`}
           bgSize="cover"
           bgPosition="center"
@@ -38,23 +44,41 @@ export const MainContent = ({handleCardClick}) => {
         </Box>
 
         <br />
-        
-        <h1 style={{ marginTop:"20px", marginBottom: "20px" }}>Shop our Hydrating Hand Sanitizers</h1>
-        <MyCarousel fetchUrl={"https://behance-z9se.onrender.com/home-1"}  onCardClick={handleCardClick}/>
+
+        <h1 style={{ marginTop: "20px", marginBottom: "20px" }}>
+          Shop our Hydrating Hand Sanitizers
+        </h1>
+        <MyCarousel
+          fetchUrl={"https://behance-z9se.onrender.com/home-1"}
+          onCardClick={handleCardClick}
+        />
 
         {/* image 2 */}
-        <Image src={home2}  style={{ marginTop:"30px", marginBottom: "20px" }}/>
+        <Image
+          src={home2}
+          style={{ marginTop: "30px", marginBottom: "20px" }}
+        />
         <br />
-        <h1 style={{ marginTop:"20px", marginBottom: "20px" }}>Keep Your Skin Healthy On The Move!</h1>
-        <MyCarousel fetchUrl={"https://behance-z9se.onrender.com/home-2"} onCardClick={handleCardClick} />
+        <h1 style={{ marginTop: "20px", marginBottom: "20px" }}>
+          Keep Your Skin Healthy On The Move!
+        </h1>
+        <MyCarousel
+          fetchUrl={"https://behance-z9se.onrender.com/home-2"}
+          onCardClick={handleCardClick}
+        />
 
         <br />
-        <h1 style={{ marginTop:"20px", marginBottom: "20px" }}>Shop Our Best Sellers</h1>
-        <MyCarousel fetchUrl={"https://behance-z9se.onrender.com/home-3"} onCardClick={handleCardClick} />
+        <h1 style={{ marginTop: "20px", marginBottom: "20px" }}>
+          Shop Our Best Sellers
+        </h1>
+        <MyCarousel
+          fetchUrl={"https://behance-z9se.onrender.com/home-3"}
+          onCardClick={handleCardClick}
+        />
         {/* image 2 */}
 
         {/* <Image src={home3} /> */}
-        <Box display="flex" style={{ marginTop:"30px", marginBottom: "20px" }}>
+        <Box display="flex" style={{ marginTop: "30px", marginBottom: "20px" }}>
           <Box
             bg="#b19dc9"
             color="white"
@@ -62,8 +86,8 @@ export const MainContent = ({handleCardClick}) => {
             width="50%"
             textAlign="center"
             height="400px"
-            margin="auto" 
-            fontSize="18px" 
+            margin="auto"
+            fontSize="18px"
           >
             <h2
               style={{
@@ -78,12 +102,12 @@ export const MainContent = ({handleCardClick}) => {
               Join The Refill Revolution{" "}
             </h1>{" "}
             <p
-             style={{
-              fontSize: "70%",
-              marginBottom: "10%",
-              marginLeft: "10%",
-              marginRight: "10%",
-            }}
+              style={{
+                fontSize: "70%",
+                marginBottom: "10%",
+                marginLeft: "10%",
+                marginRight: "10%",
+              }}
             >
               Subscribe to your favorite product’s Refill and get a 10% off
             </p>{" "}
@@ -117,11 +141,14 @@ export const MainContent = ({handleCardClick}) => {
         {/* end image 3 */}
 
         <br />
-        <h1 style={{ marginTop:"30px", marginBottom: "20px" }}>Our Refills</h1>
-        <MyCarousel fetchUrl={"https://behance-z9se.onrender.com/home-4"} onCardClick={handleCardClick}/>
+        <h1 style={{ marginTop: "30px", marginBottom: "20px" }}>Our Refills</h1>
+        <MyCarousel
+          fetchUrl={"https://behance-z9se.onrender.com/home-4"}
+          onCardClick={handleCardClick}
+        />
 
         {/* <Image src={home4} /> */}
-        <Box display="flex" style={{ marginTop:"20px", marginBottom: "20px" }}>
+        <Box display="flex" style={{ marginTop: "20px", marginBottom: "20px" }}>
           <Box
             bg="#da8879"
             color="white"
@@ -129,8 +156,8 @@ export const MainContent = ({handleCardClick}) => {
             width="50%"
             textAlign="center"
             height="400px"
-            margin="auto" 
-            fontSize="18px" 
+            margin="auto"
+            fontSize="18px"
           >
             <h2
               style={{
@@ -170,7 +197,7 @@ export const MainContent = ({handleCardClick}) => {
               DISCOVER MORE
             </button>{" "}
           </Box>
-          <Box 
+          <Box
             bgImage={`url(${home4})`}
             bgSize="cover"
             bgPosition="center"

@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import {
   Box,
   Image,
@@ -17,9 +17,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import axios from "axios";
 import AccordianItems from "./AccordianItems";
 import "../css files/ProductDP.css";
-
-
-
+import React, { useState, useEffect } from "react";
 
 // const ProductDescriptionPage = ({productId}) => {
 //  console.log("pdp" ,productId);
@@ -33,15 +31,14 @@ import probiotics from "../Images/Prebiotics.webp";
 import spray from "../Images/Spray_System.avif";
 
 const ProductDescriptionPage = ({ productId }) => {
+  const [product, setProduct] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-  const [product, setProduct] = React.useState(null);
-  const [loading, setLoading] = React.useState(true);
-
-  React.useEffect(() => {
+  useEffect(() => {
     const fetchProduct = async () => {
       try {
         const response = await axios.get(
-          `https://behance-z9se.onrender.com/data/${proId}`
+          `https://behance-z9se.onrender.com/data/${productId}`
         );
         const data = response.data;
         setProduct(data);
@@ -52,7 +49,7 @@ const ProductDescriptionPage = ({ productId }) => {
       }
     };
     fetchProduct();
-  }, [proId]);
+  }, [productId]);
 
   if (loading) {
     return (
@@ -183,7 +180,13 @@ const ProductDescriptionPage = ({ productId }) => {
           margin="auto"
           fontSize="18px"
         >
-          <h1 style={{ fontSize: "50px", marginBottom: "20px", marginTop:"150px"}}>
+          <h1
+            style={{
+              fontSize: "50px",
+              marginBottom: "20px",
+              marginTop: "150px",
+            }}
+          >
             {/* Our Purpose{" "} */}
             {product.pdp_title}
           </h1>{" "}
