@@ -18,13 +18,16 @@ import { ChevronLeftIcon, ChevronRightIcon } from "@chakra-ui/icons";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import axios from "axios";
+import { Navigate, useNavigate } from "react-router-dom";
+import ProductDescriptionPage from "./ProductDescriptionPage";
 
-export const MyCarousel = ({ fetchUrl }) => {
+export const MyCarousel = ({ fetchUrl, onCardClick } ) => {
   const [products, setProducts] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
   const [itemsToShow, setItemsToShow] = useState(4);
+  const navigate = useNavigate();
 
   useEffect(() => {
     setLoading(true);
@@ -69,6 +72,17 @@ export const MyCarousel = ({ fetchUrl }) => {
       console.log("Add To Cart Listnening!!");
   }
 
+
+  const handleProductPage=(id)=>{
+        localStorage.setItem('productId' , JSON.stringify(id));
+        console.log("setItems",  id);
+        navigate("/prodesc");
+        onCardClick(id);
+
+        const proId = (localStorage.getItem('productId'));
+        console.log("getItems",  proId);
+  }
+
   return (
     <>
       <div>
@@ -91,7 +105,8 @@ export const MyCarousel = ({ fetchUrl }) => {
       {products
         .slice(currentIndex, currentIndex + itemsToShow)
         .map((product) => (
-          <Box
+          <Box onClick={()=> handleProductPage(product.id)}
+            
             key={product.id}
             className="carousel-item"
             textAlign="center"
@@ -101,7 +116,7 @@ export const MyCarousel = ({ fetchUrl }) => {
             borderRadius="10px"
             width={`calc(100% / ${itemsToShow})`} 
           >
-            <Image
+            <Image  
               src={product.img}
             //   boxSize="200px"
               objectFit="cover"

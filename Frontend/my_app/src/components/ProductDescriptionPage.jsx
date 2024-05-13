@@ -17,6 +17,15 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import axios from "axios";
 import AccordianItems from "./AccordianItems";
 import "../css files/ProductDP.css";
+
+
+
+
+// const ProductDescriptionPage = ({productId}) => {
+//  console.log("pdp" ,productId);
+//  let proId = parseInt(productId);
+//  console.log(typeof(proId));
+
 import spray_400 from "../Images/400_Sprays.avif";
 import kills from "../Images/Kills_99_9_Virus.webp";
 import nature from "../Images/Natural_Origin.avif";
@@ -24,6 +33,7 @@ import probiotics from "../Images/Prebiotics.webp";
 import spray from "../Images/Spray_System.avif";
 
 const ProductDescriptionPage = ({ productId }) => {
+
   const [product, setProduct] = React.useState(null);
   const [loading, setLoading] = React.useState(true);
 
@@ -31,7 +41,7 @@ const ProductDescriptionPage = ({ productId }) => {
     const fetchProduct = async () => {
       try {
         const response = await axios.get(
-          `https://behance-z9se.onrender.com/data/${productId}`
+          `https://behance-z9se.onrender.com/data/${proId}`
         );
         const data = response.data;
         setProduct(data);
@@ -42,7 +52,7 @@ const ProductDescriptionPage = ({ productId }) => {
       }
     };
     fetchProduct();
-  }, [productId]);
+  }, [proId]);
 
   if (loading) {
     return (

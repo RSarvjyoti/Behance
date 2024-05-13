@@ -8,9 +8,8 @@ import {
   InputRightElement,
   Button,
   Checkbox,
- 
   Text,
-  Link,
+  
 } from "@chakra-ui/react";
 import { ViewIcon, ViewOffIcon } from "@chakra-ui/icons";
 import { useNavigate } from "react-router-dom";
@@ -40,14 +39,16 @@ function Register() {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        // Handle registration success
-        navigate("/"); // Redirect to login page after successful registration
+        navigate("/"); 
       })
       .catch((err) => console.error(err));
   };
   const handleLoginClick = () => {
-    navigate("/");
+    navigate("/login");
   };
+  const handleSignUp=()=>{
+    navigate("/");
+  }
   return (
     <Stack minH={"100vh"} direction={{ base: "column", md: "row" }}>
       <Flex p={8} flex={1} align={"center"} justify={"center"}>
@@ -84,7 +85,7 @@ function Register() {
             </InputGroup>
             <Stack spacing={6}>
               <Checkbox>Agree to terms and conditions</Checkbox>
-              <Button colorScheme={"blue"} variant={"solid"} type="submit">
+              <Button colorScheme={"blue"} width={"50%"}  onClick={handleSignUp}>
                 Sign up
               </Button>
             </Stack>
@@ -92,7 +93,7 @@ function Register() {
           <Text>
             Already have an account?{" "}
             <Button colorScheme="blue" onClick={handleLoginClick}>
-      Login
+             Login
     </Button>
           </Text>
         </Stack>

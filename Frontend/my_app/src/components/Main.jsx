@@ -5,7 +5,11 @@ import home3 from "../Images/home-3.webp";
 import home4 from "../Images/home-4.webp";
 import { Box, Image, Text } from "@chakra-ui/react";
 
-export const MainContent = () => {
+export const MainContent = ({handleCardClick}) => {
+
+  // const handleCardClick=()=>{
+  //   console.log();
+  // }
   return (
     <>
       <div>
@@ -17,7 +21,7 @@ export const MainContent = () => {
           bgRepeat="no-repeat"
           position="relative"
           width="100%"
-          fontSize="35px"
+          fontSize="32px"
           textAlign="left"
           height="400px"
         >
@@ -36,17 +40,17 @@ export const MainContent = () => {
         <br />
         
         <h1 style={{ marginTop:"20px", marginBottom: "20px" }}>Shop our Hydrating Hand Sanitizers</h1>
-        <MyCarousel fetchUrl={"https://behance-z9se.onrender.com/home-1"} />
+        <MyCarousel fetchUrl={"https://behance-z9se.onrender.com/home-1"}  onCardClick={handleCardClick}/>
 
         {/* image 2 */}
         <Image src={home2}  style={{ marginTop:"30px", marginBottom: "20px" }}/>
         <br />
         <h1 style={{ marginTop:"20px", marginBottom: "20px" }}>Keep Your Skin Healthy On The Move!</h1>
-        <MyCarousel fetchUrl={"https://behance-z9se.onrender.com/home-2"} />
+        <MyCarousel fetchUrl={"https://behance-z9se.onrender.com/home-2"} onCardClick={handleCardClick} />
 
         <br />
         <h1 style={{ marginTop:"20px", marginBottom: "20px" }}>Shop Our Best Sellers</h1>
-        <MyCarousel fetchUrl={"https://behance-z9se.onrender.com/home-3"} />
+        <MyCarousel fetchUrl={"https://behance-z9se.onrender.com/home-3"} onCardClick={handleCardClick} />
         {/* image 2 */}
 
         {/* <Image src={home3} /> */}
@@ -63,31 +67,31 @@ export const MainContent = () => {
           >
             <h2
               style={{
-                fontSize: "30px",
-                marginBottom: "10px",
+                fontSize: "100%",
+                marginBottom: "5%",
                 marginTop: "10%",
               }}
             >
               REFILLS
             </h2>{" "}
-            <h1 style={{ fontSize: "40px", marginBottom: "20px" }}>
+            <h1 style={{ fontSize: "100%", marginBottom: "5%" }}>
               Join The Refill Revolution{" "}
             </h1>{" "}
             <p
-              style={{
-                fontSize: "20px",
-                marginBottom: "20px",
-                marginLeft: "20px",
-                marginRight: "20px",
-              }}
+             style={{
+              fontSize: "70%",
+              marginBottom: "10%",
+              marginLeft: "10%",
+              marginRight: "10%",
+            }}
             >
               Subscribe to your favorite product’s Refill and get a 10% off
             </p>{" "}
             <button
               style={{
-                fontSize: "20px",
+                fontSize: "50%",
                 padding: "10px 20px",
-                borderRadius: "22px",
+                borderRadius: "10px",
                 border: "1px solid white",
                 backgroundColor: "#b19dc9",
                 color: "white",
@@ -114,7 +118,7 @@ export const MainContent = () => {
 
         <br />
         <h1 style={{ marginTop:"30px", marginBottom: "20px" }}>Our Refills</h1>
-        <MyCarousel fetchUrl={"https://behance-z9se.onrender.com/home-4"} />
+        <MyCarousel fetchUrl={"https://behance-z9se.onrender.com/home-4"} onCardClick={handleCardClick}/>
 
         {/* <Image src={home4} /> */}
         <Box display="flex" style={{ marginTop:"20px", marginBottom: "20px" }}>
@@ -130,22 +134,22 @@ export const MainContent = () => {
           >
             <h2
               style={{
-                fontSize: "30px",
-                marginBottom: "10px",
+                fontSize: "100%",
+                marginBottom: "5%",
                 marginTop: "10%",
               }}
             >
               REFILLS
             </h2>{" "}
-            <h1 style={{ fontSize: "40px", marginBottom: "20px" }}>
+            <h1 style={{ fontSize: "100%", marginBottom: "5%" }}>
               Our Purpose{" "}
             </h1>{" "}
             <p
               style={{
-                fontSize: "20px",
-                marginBottom: "20px",
-                marginLeft: "20px",
-                marginRight: "20px",
+                fontSize: "70%",
+                marginBottom: "10%",
+                marginLeft: "10%",
+                marginRight: "10%",
               }}
             >
               Our aim is to eradicate Water Crisis. We support clean water
@@ -153,9 +157,9 @@ export const MainContent = () => {
             </p>{" "}
             <button
               style={{
-                fontSize: "20px",
+                fontSize: "50%",
                 padding: "10px 20px",
-                borderRadius: "22px",
+                borderRadius: "10px",
                 border: "1px solid white",
                 backgroundColor: "#da8879",
                 color: "white",
