@@ -49,6 +49,7 @@ const AllProduct = () => {
     const openPopup = (item) => {
         setSelectedItem(item); // Set the selected item when opening the modal
         setIsOpen(true);
+
     };
 
     const closePopup = () => {
