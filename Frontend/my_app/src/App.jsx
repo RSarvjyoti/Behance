@@ -1,6 +1,8 @@
+
 import AllProduct from "./components/AllProduct";
 import Login from "./components/Login";
 import Register from "./components/Signup";
+
 import { Home } from "./components/Home";
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
@@ -13,8 +15,6 @@ const productId = (localStorage.getItem('productId'));
 console.log("getItem" ,productId  );
 
 function App() {
- 
-
   return (
     <>
         <Navbar />
