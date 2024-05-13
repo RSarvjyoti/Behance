@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="App">
       <ChakraProvider>
-        <ProductDescriptionPage productId={2} />
+        <ProductDescriptionPage productId={11} />
       </ChakraProvider>
     </div>
   );
