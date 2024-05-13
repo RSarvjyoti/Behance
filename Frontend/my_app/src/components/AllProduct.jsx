@@ -1,8 +1,8 @@
 import axios from 'axios';
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import {
     Container, Grid, GridItem, Box, Flex, Button, Card, CardBody, CardFooter,
-    Image, Stack, Text, LinkBox, LinkOverlay, Input
+    Image, Stack, Text, LinkBox, LinkOverlay, 
 } from '@chakra-ui/react';
 import { Pagination } from './Pagination';
 import SearchBar from './SearchBar';
@@ -35,14 +35,20 @@ const AllProduct = () => {
 
     const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
-    const handleSearchInputChange = (e) => {
-        setSearchQuery(e.target.value);
-        setCurrentPage(1);
-    }
+    // const handleSearchInputChange = (e) => {
+    //     setSearchQuery(e.target.value);
+    //     setCurrentPage(1);
+    // }
+    const boxStyle = {
+        backgroundColor: isHovered ? 'lightblue' : 'white',
+        padding: '10px',
+        border: '1px solid black',
+        width: '200px',
+        textAlign: 'center',
+        cursor: 'pointer' 
+      };
 
     return (
-
-
         <Container maxW="container.xl" centerContent>
             <Flex direction='row' justifyContent='space-between' p={2} w='100%' alignItems="center" flexWrap="wrap">
                 <Button colorScheme='black' variant='outline' mb={{ base: 2, md: 0 }}>
@@ -62,11 +68,12 @@ const AllProduct = () => {
                                 display: 'flex', justifyContent: 'center'
                             };
 
+//onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}
                             return (
                                 <GridItem key={id} w='100%' h='auto'>
-                                    <Card maxW='300px' h='450px' style={flex}>
+                                    <Card maxW='300px' h='450px'  style={{ boxShadow:"0px 4px 8px rgba(0, 0, 0, 0.1)"}}> 
                                         <CardBody>
-                                            <LinkBox onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
+                                            <LinkBox  >
                                                 <Box>
                                                     <Box w='200px' h='200px' style={{ overflow: 'hidden' }}>
                                                         <Image

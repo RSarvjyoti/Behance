@@ -1,13 +1,20 @@
+import { useEffect } from "react"
 import { Footer } from "./Footer"
 import { MainContent } from "./Main"
-import { Navbar } from "./Navbar"
+
 
 
 export const Home=()=>{
+
+
+   const onCardClick=(id)=>{
+        // console.log(id);
+      }
+    
     return (
         <>
-        <Navbar />
-        <MainContent />
+        {/* <Navbar /> */}
+        <MainContent handleCardClick={onCardClick}/>
         <Footer />
         </>
     )
