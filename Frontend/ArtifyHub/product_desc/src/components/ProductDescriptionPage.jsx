@@ -173,13 +173,13 @@ const ProductDescriptionPage = ({ productId }) => {
           margin="auto"
           fontSize="18px"
         >
-          <h1 style={{ fontSize: "40px", marginBottom: "20px" }}>
+          <h1 style={{ fontSize: "50px", marginBottom: "20px", marginTop:"150px"}}>
             {/* Our Purpose{" "} */}
             {product.pdp_title}
           </h1>{" "}
           <p
             style={{
-              fontSize: "20px",
+              fontSize: "35px",
               marginBottom: "20px",
               marginLeft: "20px",
               marginRight: "20px",
