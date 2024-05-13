@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import '../Crud.css'; // Assuming this is your CSS file for styling
+import './Crud.css'; // Assuming this is your CSS file for styling
 
 const API_URL = 'https://behance-z9se.onrender.com/data';
 
