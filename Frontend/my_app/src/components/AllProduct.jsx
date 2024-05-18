@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import {
     Container, Grid, GridItem, Box, Flex, Button, Card, CardBody, CardFooter,
     Image, Stack, Text, LinkBox, LinkOverlay, Select, Drawer, DrawerBody, DrawerFooter, DrawerHeader, DrawerOverlay, DrawerContent, DrawerCloseButton,
+    Skeleton, SkeletonText, SkeletonCircle
 } from '@chakra-ui/react';
 import { Pagination } from './Pagination';
 import SearchBar from './SearchBar';
@@ -12,6 +13,7 @@ const ITEMS_PER_PAGE = 20;
 const AllProduct = () => {
     const [myData, setData] = useState([]);
     const [error, setError] = useState("");
+    const [isLoading, setIsLoading] = useState(true);
     const [isHovered, setIsHovered] = useState(false);
     const [currentPage, setCurrentPage] = useState(1);
     const [searchQuery, setSearchQuery] = useState("");
@@ -24,6 +26,7 @@ const AllProduct = () => {
         axios.get('https://behance-z9se.onrender.com/data')
             .then((res) => {
                 setData(res.data);
+                setIsLoading(false);
             })
             .catch(() => setError(error));
     }, [error]);
@@ -112,50 +115,68 @@ const AllProduct = () => {
             <Flex direction={['column', 'column', 'row', 'row']} justify="center">
                 <Box w={['100%', '100%', '80%', '80%']} p={4} mb={10}>
                     <Grid templateColumns={['repeat(1, 1fr)', 'repeat(2, 1fr)', 'repeat(4, 1fr)', 'repeat(4, 1fr)']} gap={3}>
-                        {currentItems.map((post) => {
-                            const { id, img_src, img_src_2, title, price_item, price_item_2 } = post;
-
-                            const flex = {
-                                display: 'flex', justifyContent: 'center'
-                            };
-
-                            return (
-                                <GridItem key={id} w='100%' h='auto'>
+                        {isLoading ? (
+                            [...Array(ITEMS_PER_PAGE)].map((_, index) => (
+                                <GridItem key={index} w='100%' h='auto'>
                                     <Card maxW='300px' h='450px' style={{ boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.1)" }}>
                                         <CardBody>
-                                            <LinkBox>
-                                                <Box>
-                                                    <Box w='200px' h='200px' style={{ overflow: 'hidden' }}>
-                                                        <Image
-                                                            src={isHovered ? img_src_2 : img_src}
-                                                            alt={title}
-                                                        />
-                                                    </Box>
-                                                    <Stack mt='6' spacing='3'>
-                                                        <Text text-align="center" style={flex}>
-                                                            <LinkOverlay href='#'> {title} </LinkOverlay>
-                                                        </Text>
-                                                        <Text fontSize='1xl' style={flex}>
-                                                            {isHovered ? price_item_2 : price_item}
-                                                        </Text>
-                                                    </Stack>
-                                                </Box>
-                                            </LinkBox>
+                                            <Skeleton height="200px" />
+                                            <Stack mt='6' spacing='3'>
+                                                <SkeletonText mt='4' noOfLines={2} spacing='4' />
+                                            </Stack>
                                         </CardBody>
-                                        <CardFooter style={{ ...flex }}>
-                                            <Button
-                                                borderRadius='50px'
-                                                border={'1px'}
-                                                bg='none'
-                                                onClick={() => addToCart(post)}
-                                            >
-                                                Add to cart
-                                            </Button>
+                                        <CardFooter>
+                                            <Skeleton height="40px" width="100px" />
                                         </CardFooter>
                                     </Card>
                                 </GridItem>
-                            );
-                        })}
+                            ))
+                        ) : (
+                            currentItems.map((post) => {
+                                const { id, img_src, img_src_2, title, price_item, price_item_2 } = post;
+
+                                const flex = {
+                                    display: 'flex', justifyContent: 'center'
+                                };
+
+                                return (
+                                    <GridItem key={id} w='100%' h='auto'>
+                                        <Card maxW='300px' h='450px' style={{ boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.1)" }}>
+                                            <CardBody>
+                                                <LinkBox>
+                                                    <Box>
+                                                        <Box w='200px' h='200px' style={{ overflow: 'hidden' }}>
+                                                            <Image
+                                                                src={isHovered ? img_src_2 : img_src}
+                                                                alt={title}
+                                                            />
+                                                        </Box>
+                                                        <Stack mt='6' spacing='3'>
+                                                            <Text text-align="center" style={flex}>
+                                                                <LinkOverlay href='#'> {title} </LinkOverlay>
+                                                            </Text>
+                                                            <Text fontSize='1xl' style={flex}>
+                                                                {isHovered ? price_item_2 : price_item}
+                                                            </Text>
+                                                        </Stack>
+                                                    </Box>
+                                                </LinkBox>
+                                            </CardBody>
+                                            <CardFooter style={{ ...flex }}>
+                                                <Button
+                                                    borderRadius='50px'
+                                                    border={'1px'}
+                                                    bg='none'
+                                                    onClick={() => addToCart(post)}
+                                                >
+                                                    Add to cart
+                                                </Button>
+                                            </CardFooter>
+                                        </Card>
+                                    </GridItem>
+                                );
+                            })
+                        )}
                     </Grid>
                     <Pagination currentPage={currentPage} itemsPerPage={ITEMS_PER_PAGE} totalItems={filteredData.length} paginate={paginate} />
                 </Box>
