@@ -1,5 +1,6 @@
 # Project Title
 ### ArtifyHub
+Welcome to the Handwash Website project! This application is designed to promote proper handwashing techniques and hygiene practices. Our goal is to educate users on the importance of hand hygiene, especially in preventing the spread of illnesses
 
 ## Introduction
 
