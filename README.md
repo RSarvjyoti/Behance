@@ -11,7 +11,7 @@ It was a collaborative effort taken by 4 team members  Sarvjoyti, Shubham khanga
 Frontend | Backend
 
 ## Deployed App
-Frontend:    Backend:   Database:
+Frontend: https://66a4b28c9788dce6781962d2--artifyhub.netlify.app/login    Backend:   Database:
 
 ## Directory Structure
 ![Screenshot (563)](https://github.com/RSarvjyoti/Behance/assets/154727754/955eb50f-3d51-4c07-80c3-7c19308571ed)
